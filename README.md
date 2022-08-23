@@ -1,24 +1,59 @@
-# README
+# アプリケーション名
+--------------------------------------
+aquarium discovery
+# アプリケーション概要
+--------------------------------------
+水族館やそこにいる生き物を調べることができる。
+# URL
+--------------------------------------
+# テスト用アカウント
+--------------------------------------
+# 利用方法
+--------------------------------------
+<dl>
+  <dt>水族館や生き物を探す</dt>
+  <dd>1. トップページから生物もしくは水族館の検索ページに遷移する。<br>
+      2. 条件やフリーワードで検索をかける。<br>
+      3. 検索結果の一覧から目当ての生物、もしくは水族館を選択すると詳細な情報が見られる。</dd>
+</dl>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<dl>
+  <dt>リアクションをする</dt>
+  <dd>1. ヘッダーからユーザー新規登録を行う<br>
+      2. 水族館や生き物のページからそれぞれレビューやコメント一覧ページにアクセスする。<br>
+      3. 投稿ページから行った感想や、とった写真などを投稿して情報を共有する。</dd>
+</dl>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# アプリケーションを作成した背景
+--------------------------------------
+友人、家族で出かける、旅行をするときに行き先に困ることがあると思います。<br>
+特に遠くに外出する場合はその土地に詳しくないことで、趣味が合うスポットがあることを知らずに終わってしまうことも多いと友人数人からのヒアリングでわかりました。<br>
+好き嫌いが分かれにくい観光場所だという推測も組み込んで水族館を探しやすくするアプリの制作を決めました。
+# 洗い出した要件
+--------------------------------------
+https://docs.google.com/spreadsheets/d/1PrYSmJvqKOFSyy-VFxZvOnMZaP2HLOO7zJpsZpehwis/edit#gid=982722306
+# 実装した機能についての画像やGIFおよびその説明
+--------------------------------------
+# 実装予定の機能
+--------------------------------------
+# データベース設計
+--------------------------------------
+[![Image from Gyazo](https://i.gyazo.com/e578ff605fd6b5b9d0b868e347cc6edd.png)](https://gyazo.com/e578ff605fd6b5b9d0b868e347cc6edd)
+# 画面遷移図
+--------------------------------------
+[![Image from Gyazo](https://i.gyazo.com/c5dfd3b26b53cb61b49592bf644adc46.png)](https://gyazo.com/c5dfd3b26b53cb61b49592bf644adc46)
+# 開発環境
+--------------------------------------
+・ フロンドエンド
+HTML,CSS,javascript
+・ バックエンド
+ruby on rails 
+・ インフラ
+・ テスト
+・ テキストエディタ
+visual studio code
+・ タスク管理
+# ローカルでの動作方法
+--------------------------------------
+# 工夫したポイント
+--------------------------------------
