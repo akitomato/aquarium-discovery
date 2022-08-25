@@ -4,7 +4,7 @@ class CreateAnimals < ActiveRecord::Migration[6.0]
 
       t.timestamps
       t.string :name,                   null: false
-      t.string :detail,                 null: false
+      t.text   :detail,                 null: false
       t.integer :categpry_id,           null: false
     end
   end
