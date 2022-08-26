@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :authenticate_user!, only: [:new,:edit]
-  before_action :set_animal, only: [:show,:edit]
+  before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   def index
     @animals =Animal.search(params[:keyword])
