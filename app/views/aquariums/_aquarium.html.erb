@@ -1,0 +1,15 @@
+<div class='whole'>
+  <ul class='aquarium-list'>
+    <%= link_to aquarium_path(aquarium.id) do %>
+    <li>
+      <%= aquarium.name %>
+    </li>
+    <li>
+      <%= aquarium.area.name %>
+    </li>
+    <li>
+      <%= image_tag aquarium.image, class:"aquarium-image" %>
+    </li>
+    <% end %>
+  </ul>
+</div>

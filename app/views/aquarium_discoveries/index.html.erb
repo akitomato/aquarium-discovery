@@ -1,13 +1,27 @@
 <%= render "shared/header" %>
 <div class='main'>
-
-  <div class='title-contents'>
-    <h2 class='servise-explain1'>
-      水族館を探そう！生き物を見つけよう！
-    </h2>
-    <p class='servise-explain2'>
-      好きな方を選んで検索してね
-    </p>
+  <div class='title'>
+    <div class='title-contents'>
+      <h2 class='servise-explain1'>
+        水族館を探そう！生き物を見つけよう！
+      </h2>
+      <p class='servise-explain2'>
+        好きな方を選んで検索してね
+      </p>
+    </div>
   </div>
 
+  <div class="links-for-viewer">
+    <div class="links-to-search">
+      <%= link_to "生き物検索", search_animals_path, class: "link-to-animal-search" %>
+      <%= link_to "水族館検索", search_aquariums_path, class: "link-to-aquarium-search" %>
+    </div>
+  </div>
+
+  <div class="links-for-admin">
+    <div class="links-to-post">
+      <%= link_to "（管理所用リンク）生き物投稿", new_animal_path, class: "link-to-post" %>
+      <%= link_to "（管理所用リンク）水族館投稿", new_aquarium_path, class: "link-to-post" %>
+    </div>
+  </div>
 </div>

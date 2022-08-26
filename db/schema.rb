@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_24_052142) do
+ActiveRecord::Schema.define(version: 2022_08_25_052005) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,31 @@ ActiveRecord::Schema.define(version: 2022_08_24_052142) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "animal_aquaria", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "animal_id", null: false
+    t.bigint "aquarium_id", null: false
+    t.index ["animal_id"], name: "index_animal_aquaria_on_animal_id"
+    t.index ["aquarium_id"], name: "index_animal_aquaria_on_aquarium_id"
+  end
+
+  create_table "animals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name", null: false
+    t.text "detail", null: false
+    t.integer "category_id", null: false
+  end
+
+  create_table "aquaria", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name", null: false
+    t.text "detail", null: false
+    t.integer "area_id", null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -47,4 +72,6 @@ ActiveRecord::Schema.define(version: 2022_08_24_052142) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "animal_aquaria", "animals"
+  add_foreign_key "animal_aquaria", "aquaria"
 end

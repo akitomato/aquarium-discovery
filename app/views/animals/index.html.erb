@@ -1,0 +1,7 @@
+<%= render "shared/header" %>
+<h1>Animals#index</h1>
+<div class='search-index'>
+  <% @animals.each do |animal| %>
+    <%= render partial: "animal", locals: { animal: animal } %>
+  <% end %>
+</div>

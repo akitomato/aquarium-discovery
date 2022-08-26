@@ -1,0 +1,57 @@
+<div class="whole">
+  <div class="animals-post-main">
+    <h2 class="animals-post-title">生き物の情報を入力</h2>
+    <%= form_with model: @animal, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 生き物情報 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        生き物の画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"animal-image" %>
+      </div>
+    </div>
+    <div class="new-animals">
+      <div class="weight-bold-text">
+        生き物の名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"animals-text", id:"animal-name", placeholder:"生き物名" %>
+      <div class="animals-explain">
+        <div class="weight-bold-text">
+          生き物の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :detail, class:"animals-text", id:"animal-info", placeholder:"生き物の説明（必須 1,500文字まで）" ,rows:"15" ,maxlength:"1500" %>
+      </div>
+    </div>
+    <div class="animals-detail">
+      <div class="weight-bold-text">生き物の関連情報</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"animal-category"}) %>
+        <div class="weight-bold-text">
+          展示されている水族館
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_check_boxes(:aquarium_ids, Aquarium.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"displayed-aquarium"}) %>
+      </div>
+    </div>
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
+
+
+  </div>
+</div>
