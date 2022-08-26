@@ -1,2 +1,24 @@
+<%= render "shared/header" %>
 <h1>Aquariums#show</h1>
-<p>Find me in app/views/aquariums/show.html.erb</p>
+<div class="aquarium-show">
+  <div class="aquarium-box">
+    <h2 class="name">
+      <%= @aquarium.name %>
+    </h2>
+    <div class="aquarium-img-content">
+      <%= image_tag @aquarium.image, class:"animal-box-img" %>
+    </div>
+    <div class="aquarium-area-box">
+      カテゴリー:
+      <%= @aquarium.area.name %>
+    </div>
+    <div class="aquarium-explain-box">
+      <span><%= @aquarium.detail %></span>
+    </div>
+    <% if user_signed_in? && current_user.id == 1 %>
+    <%= link_to "情報編集", edit_aquarium_path, method: :get, class: "aquarium-red-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "情報削除", aquarium_path, method: :delete, class:"aquarium-destroy" %>
+    <% end %>
+  </div>
+</div>
