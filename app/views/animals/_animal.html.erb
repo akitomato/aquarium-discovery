@@ -1,10 +1,15 @@
-<div class='whole' style="background-image: url(<%= animal.image %>);">
+<div class='whole' >
   <ul class='animal-list'>
+    <%= link_to animal_path(animal.id) do %>
     <li>
       <%= animal.name %>
     </li>
     <li>
-      <%= animal.category %>
+      <%= animal.category.name %>
     </li>
+    <li>
+      <%= image_tag animal.image, class:"animal-image" %>
+    </li>
+    <% end %>
   </ul>
 </div>

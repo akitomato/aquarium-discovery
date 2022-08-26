@@ -1,5 +1,22 @@
-.main{
+
+
+.title{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.links-to-search{
+  display: flex;
+  justify-content: space-around;
+}
+
+.links-for-admin{
+  padding-top: 100px;
+}
+
+.link-to-post{
+  text-decoration: none;
+  color: black;
 }

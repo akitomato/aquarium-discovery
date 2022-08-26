@@ -9,7 +9,9 @@ class Category < ActiveHash::Base
     { id: 7, name: 'イカ' },
     { id: 8, name: 'タコ' },
     { id: 9, name: 'ヒトデ' },
-    { id: 10, name: 'エイ' }
+    { id: 10, name: 'エイ' },
+    { id: 11, name: 'ペンギン' },
+    { id: 12, name: 'クラゲ' },
   ]
 
   include ActiveHash::Associations

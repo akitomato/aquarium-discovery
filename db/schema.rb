@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2022_08_25_052005) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name", null: false
     t.text "detail", null: false
-    t.integer "categpry_id", null: false
+    t.integer "category_id", null: false
   end
 
   create_table "aquaria", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

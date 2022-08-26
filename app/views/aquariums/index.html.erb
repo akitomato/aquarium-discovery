@@ -1,2 +1,6 @@
-<h1>Aquariums#index</h1>
-<p>Find me in app/views/aquariums/index.html.erb</p>
+<%= render "shared/header" %>
+<div class='search-index'>
+  <% @aquariums.each do |aquarium| %>
+    <%= render partial: "aquarium", locals: { aquarium: aquarium } %>
+  <% end %>
+</div>

@@ -1,4 +1,7 @@
 class AnimalsController < ApplicationController
+  before_action :authenticate_user!, only: [:new,:edit]
+  before_action :set_animal, only: [:show,:edit]
+
   def index
     @animals =Animal.search(params[:keyword])
   end
@@ -26,8 +29,12 @@ class AnimalsController < ApplicationController
 
   def animal_params
     params.require(:animal).permit(
-      :name, :detail, :category_id, :image
-    ).merge(aquarium_id: params[:aquarium_id])
+      :name, :detail, :category_id, :image,
+    ).merge(aquarium_ids: params[:aquarium_ids])
+  end
+
+  def set_animal
+    @animal = Animal.find(params[:id])
   end
 
 end

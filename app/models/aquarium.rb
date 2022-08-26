@@ -4,5 +4,13 @@ class Aquarium < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
 
-  validates :genre_id, numericality: { other_than: 1 , message: "は選択必須です"}
+  def self.search(search)
+    if search != ""
+      Aquarium.where('name LIKE(?)', "%#{search}%")
+    else
+      Aquarium.all
+    end
+  end
+
+  validates :area_id, numericality: { other_than: 1 , message: "は選択必須です"}
 end
