@@ -36,6 +36,9 @@ https://docs.google.com/spreadsheets/d/1PrYSmJvqKOFSyy-VFxZvOnMZaP2HLOO7zJpsZpeh
 --------------------------------------
 # 実装予定の機能
 --------------------------------------
+カテゴリー検索機能
+水族館に対してのレビュー機能
+生き物に対してのコメント機能
 # データベース設計
 --------------------------------------
 [![Image from Gyazo](https://i.gyazo.com/90d4234e586cf03d67e8bf4c98ea18fa.png)](https://gyazo.com/90d4234e586cf03d67e8bf4c98ea18fa)
