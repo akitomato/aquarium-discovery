@@ -10,10 +10,10 @@ https://aquarium-discovery.herokuapp.com/
 
 # テスト用アカウント
 --------------------------------------
-・管理者用アカウント
-  アドレス：admin1@com,password:admin1
-・閲覧者用アカウント
-  アドレス:user1@com,password:user11
+・管理者用アカウント<br>
+  アドレス：admin1@com,password:admin1<br>
+・閲覧者用アカウント<br>
+  アドレス:user1@com,password:user11<br>
 
 # 利用方法
 --------------------------------------
@@ -54,14 +54,15 @@ https://docs.google.com/spreadsheets/d/1PrYSmJvqKOFSyy-VFxZvOnMZaP2HLOO7zJpsZpeh
 [![Image from Gyazo](https://i.gyazo.com/c5dfd3b26b53cb61b49592bf644adc46.png)](https://gyazo.com/c5dfd3b26b53cb61b49592bf644adc46)
 # 開発環境
 --------------------------------------
-・ フロンドエンド
-HTML,CSS,javascript
-・ バックエンド
-ruby on rails 
-・ インフラ
-・ テスト
-・ テキストエディタ
-visual studio code
+・ フロンドエンド:
+HTML,CSS,javascript<br>
+・ バックエンド:
+ruby on rails <br>
+・ インフラ<br>
+・ テスト:
+rspec<br>
+・ テキストエディタ:
+visual studio code<br>
 ・ タスク管理
 # ローカルでの動作方法
 --------------------------------------
