@@ -11,14 +11,30 @@ class AquariumsController < ApplicationController
 
   def create
     @aquarium = Aquarium.new(aquarium_params)
-    @aquarium.save
-    redirect_to root_path
+    if @aquarium.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
   end
 
   def edit
+  end
+
+  def update
+    if @aquarium.update(aquarium_params)
+      redirect_to aquarium_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @aquarium.destroy
+    redirect_to root_path
   end
 
   def search

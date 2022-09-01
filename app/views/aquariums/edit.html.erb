@@ -1,2 +1,53 @@
 <h1>Aquariums#edit</h1>
-<p>Find me in app/views/aquariums/edit.html.erb</p>
+<div class="whole">
+  <div class="aquariums-post-main">
+    <h2 class="aquariums-post-title">水族館の情報を入力</h2>
+    <%= form_with url: aquarium_path, model: @aquarium, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 水族館情報 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        水族館の画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"aqurium-image" %>
+      </div>
+    </div>
+    <div class="new-aquriums">
+      <div class="weight-bold-text">
+        水族館名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"aquariums-text", id:"aquarium-name", placeholder:"水族館名" %>
+      <div class="aquariums-explain">
+        <div class="weight-bold-text">
+          水族館の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :detail, class:"aquariums-text", id:"aquarium-info", placeholder:"水族館の説明（必須 1,500文字まで）" ,rows:"15" ,maxlength:"1500" %>
+      </div>
+    </div>
+    <div class="aquariums-detail">
+      <div class="weight-bold-text">水族館の関連情報</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          地域
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"aquarium-area"}) %>
+      </div>
+    </div>
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
+
+
+  </div>
+</div>
